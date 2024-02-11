@@ -22,7 +22,7 @@ Dijkstra's algorithm is applicable for:
 ```python
 def dijkstra(current, nodes, distances):
 ```
-This line defines a function called `dijkstra` that takes three parameters: `current`, which represents the starting node for the shortest path search, `nodes`, which is a tuple containing all the nodes in the graph, and `distances`, which is a dictionary representing the graph structure where keys are nodes and values are dictionaries containing neighboring nodes and their respective distances.
+There will be a function called `dijkstra` that takes three parameters: `current`, which represents the starting node for the shortest path search, `nodes`, which is a tuple containing all the nodes in the graph, and `distances`, which is a dictionary representing the graph structure where keys are nodes and values are dictionaries containing neighboring nodes and their respective distances.
 
 ```python
     unvisited = {node: None for node in nodes}
@@ -84,7 +84,7 @@ This checks if all nodes have been visited. If so, the loop breaks, and the shor
 ```python
         candidates = [node for node in unvisited.items() if node[1]]
 ```
-This creates a list of nodes that are still unvisited (i.e., having a distance value) from the `unvisited` dictionary.
+This creates a list of nodes that are still unvisited (having a distance value) from the `unvisited` dictionary.
 
 ```python
         print(sorted(candidates, key = lambda x: x[1]))
