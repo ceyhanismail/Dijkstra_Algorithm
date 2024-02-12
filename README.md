@@ -130,10 +130,10 @@ Output:
 ````
 ## Time complexity
 
-The program searchs through all nodes to find the closest within the graph. This means that the initial time complexity will be O(n) for this search. This will bring the total time complexity to O(n^2) where V is the number of nodes in the graph. 
+The time complexity of Dijkstra's algorithm implementation is O(n^2), where n is the number of nodes in the graph.
 
-* For each node (n), the connected edges need to be relaxed in order to find the minimum cost edge that connects a node to n. n number of calculations need to be done and each operation takes O(n) times, therefore the time complexity will be  O(n^2).
-     * n calculation 
-     * Q(n) time
-     * Total: Q(n^2)
+* Initializing unvisited and visited dictionaries takes O(n) time.
+* The main loop iterates over all nodes, which is O(n).
+* Within each iteration, there's a nested loop iterating over the neighbors of the current node. In the worst case, this loop runs over all edges in the graph, resulting in O(n) iterations overall.
+* Overall, the time complexity is dominated by the nested loop and the sorting operation, resulting in O(n^2).
 
